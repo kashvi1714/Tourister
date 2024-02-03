@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Protest Riot", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(to right, #b43b1d, #c1511b, #cc671a, #d57c1a, #dd921d, #d88d1f, #d28820, #cd8321, #b7651f, #9d481e, #812e1a, #641515);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x:hidden ;    
+}
+
+.landing{
+    width: 95%;
+    height: 90%;
+    background:url(images/bg.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 5rem rgba(0,0,0.4);
+    position: relative;
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 12rem;
+}
+
+.navigation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.square{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #e1cc88;
+    border-radius: 50%;
+    margin-right: 1rem;
+    
+}
+
+.logo-txt{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    color: #030101;
+}
+
+.nav-item{
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000000; 
+}
+
+.nav-item:hover{
+    background-color: #000000;
+    color: azure;
+    border-radius:4rem;
+}
+
+.headline{
+    position: absolute;
+    top: 30%;
+    left: 4%;
+}
+
+.replace .headline{
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+}
+
+.headline h1{
+    font-size: 5rem;
+    font-weight: 900;
+    color: hsla(0, 100%, 97%, 0.707);
+}
+
+.headline h1 span{
+    display: block;
+    font-size: 7rem;
+    font-weight: bold;
+    text-align:center;
+    text-transform: uppercase;
+    color: #e1cc88;
+    margin-top: 6rem;
+    text-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+}
+
+
+.contact{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.replace .contact{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s 0.5s;
+}
+
+.contact h3{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #ba9109;
+}
+
+.contact h1{
+    font-size: 4.2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.contact p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ba9109;
+    margin-bottom: 3rem;
+}
+
+.contact p a{
+    color: #8aafcf;
+}
+
+.input-space{
+    width: 35rem;
+    height: 4.5rem;
+    margin: 1rem 0;
+}
+
+.input-space input{
+    width: 100%;
+    height: 100%;
+    background-color: #7b5605c6;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    color: #eb9813;
+    font-size: 1.4rem;
+}
+
+.input-space input:focus{
+    background-color: #7b5605c6;
+    border: 0.2rem solid #e7a516;
+}
+
+.hide .input-space:nth-child(1),
+.hide .input-space:nth-child(2){
+    display: none;
+}
+
+.input-space i {
+    position: relative;
+    bottom: 50%;
+    left: 32rem;
+    
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.btn-space{
+    width: 40rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.contact-btn{
+    width: 46%;
+    height: 100%;
+    border-radius: 4rem;
+    columns: #fff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-btn:nth-child(1){
+    background-color: #7b5605c6;
+}
+
+.contact-btn:nth-child(2){
+    background-color: #e7a516;
+}
+
+.bottom-logo{
+    position: absolute;
+    bottom: 3rem;
+    width: 4rem;
+    right: 3rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color:#e1cc88 ;
+    box-shadow: 1 1rem 5rem rgba(0,0,0,0.3);
+}
+
+@media only screen and (min-width: 200px) and (max-width: 479px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .landing {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-txt{
+        position: relative;
+    }
+    .nav-item{
+        margin:0.6rem  1.5rem;
+        color: #fac403;
+    }
+
+    .headline h1{
+        font-size: 4rem;
+        position: relative;
+        top: 5rem;
+    }
+
+    .headline h1 span{
+        font-size: 5rem;
+        position: relative;
+        top:1rem;
+    }
+
+    .contact{
+        position: relative;
+        top: 20rem;
+    }
+
+    .contact h3{
+        position: relative;
+        top: 3rem;
+        color:#fac403 ;
+    }
+
+    .contact h1{
+        font-size: 3rem;
+        position: relative;
+        top: 3rem;
+    }
+    .contact p{
+        font-size: 1.5rem;
+        color:#fac403 ;
+        position: relative;
+        top: 1.7rem;
+    }
+
+    .contact p a{
+        color: #05208e;
+    }
+
+    .input-space{
+        width: 32rem;
+        height: 4rem;
+    }
+
+    .input-space i{
+        position: relative;
+        bottom: 50%;
+        left: 2rem;
+    }
+
+    .btn-space{
+        width: 32rem;
+        height: 4rem;
+    }
+
+    .headline h1{
+        font-size: 4rem;
+        position: relative;
+        bottom: 2rem;
+    }
+
+    .headline h1 span{
+        font-size: 5rem;
+        text-align: start;
+        position: relative;
+        bottom: 4rem;
+    }
+
+    .navigation {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .landing {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-txt{
+        position: relative;
+    }
+    .nav-item{
+        margin:0.6rem 5rem;
+        color: #fac403;
+    }
+
+    .contact{
+        position: relative;
+        top: 18rem;
+    }
+
+    .contact h3{
+        position: relative;
+        top: 3rem;
+        color:#fac403 ;
+    }
+
+    .contact h1{
+        font-size: 3rem;
+        position: relative;
+        top: 2rem;
+    }
+    .contact p{
+        font-size: 1.6rem;
+        color:#fac403 ;
+        position: relative;
+        top: 1.5rem;
+    }
+
+    .contact p a{
+        color: #05208e;
+    }
+
+    .input-space{
+        width: 38rem;
+        height: 4.5rem;
+    }
+
+    .input-space i{
+        position: relative;
+        bottom: 50%;
+        left: 35rem;
+    }
+
+    .btn-space{
+        width: 38rem;
+        height: 4.5rem;
+    }
+
+    .headline h1{
+        font-size: 4rem;
+        position: relative;
+        top: 5rem;
+    }
+
+    .headline h1 span{
+        font-size: 5rem;
+        position: relative;
+        top: 1rem;
+        text-align: start;
+    }
+
+    .navigation {
+        flex-direction: row;
+        align-items:flex-start;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px){
+    .container {
+        padding: 1rem;
+    }
+
+
+    .landing {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-txt{
+        position: relative;
+    }
+    .nav-item{
+        font-size: large;
+        margin:0.6rem  1.5rem;
+        color: #fac403;
+    }
+
+    .contact{
+        position: relative;
+        top: 15rem;
+    }
+
+    .contact h3{
+        position: relative;
+        top: 3rem;
+        color:#fac403 ;
+    }
+
+    .contact h1{
+        font-size: 3.5rem;
+        position: relative;
+        top: 3rem;
+    }
+    .contact p{
+        font-size: 1.6rem;
+        color:#fac403 ;
+        position: relative;
+        top: 2rem;
+    }
+
+    .contact p a{
+        color: #05208e;
+    }
+
+    .input-space{
+        width: 35rem;
+        height: 4rem;
+    }
+
+    .input-space i{
+        position: relative;
+        bottom: 50%;
+        left: 32rem;
+    }
+
+    .btn-space{
+        width: 35rem;
+        height: 4rem;
+    }
+
+    .navigation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .headline h1{
+        font-size: 6rem;
+        position: relative;
+        top: 1rem;
+    }
+
+    .headline h1 span{
+        font-size: 7rem;
+        text-align: start;
+        position: relative;
+        top: 1rem;
+    }
+
+}
+
+@media only screen and (min-width:960px) and ( max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+
+    .landing {
+        width: 90%;
+        height: 70%;
+    }
+
+    .nav {
+        width: 70%;
+        height: auto;
+        position: relative;
+        top: 1rem;
+    }
+
+    .logo-txt{
+        position: relative;
+    }
+    .nav-item{
+        margin:0.6rem  1.5rem;
+        color: #fac403;
+    }
+
+    .headline h1{
+        font-size: 4rem;
+        position: relative;
+        top: 5rem;
+    }
+
+    .headline h1 span{
+        font-size: 5rem;
+        position: relative;
+        top: 1rem;
+    }
+
+    .contact{
+        position: relative;
+        top: 0.1rem;
+    }
+
+    .contact h3{
+        position: relative;
+        top: 4rem;
+        color:#fac403 ;
+    }
+
+    .contact h1{
+        font-size: 2rem;
+        position: relative;
+        top: 3rem;
+    }
+    .contact p{
+        font-size: 1.4rem;
+        color:#fac403 ;
+        position: relative;
+        top: 1.5rem;
+    }
+
+    .contact p a{
+        color: #05208e;
+    }
+
+    .input-space{
+        width: 30rem;
+        height: 3rem;
+    }
+
+    .input-space i{
+        position: relative;
+        bottom: 50%;
+        left: 27rem;
+    }
+
+    .btn-space{
+        width: 30rem;
+        height: 3rem;
+    }
+
+    .navigation {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1288px) {
+    .container {
+        padding: 1rem;
+    }
+
+
+    .landing {
+        width: 95%;
+        height: 80%;
+    }
+
+    .nav {
+        width: 30%;
+        height: auto;
+    }
+
+    .logo-txt{
+        position: relative;
+    }
+
+    .nav-item{
+        margin:0.6rem  5rem;
+        color: #fac403;
+    }
+
+    .contact{
+        position: relative;
+        top: 8rem;
+    }
+
+    .contact h3{
+        position: relative;
+        top: 3rem;
+        color:#fac403 ;
+    }
+
+    .contact h1{
+        font-size: 3rem;
+        position: relative;
+        top: 3rem;
+    }
+    .contact p{
+        font-size: 1.6rem;
+        color:#fac403 ;
+        position: relative;
+        top: 1.8rem;
+    }
+
+    .contact p a{
+        color: #b6c0e6;
+    }
+
+    .input-space{
+        width: 32rem;
+        height: 4rem;
+    }
+
+    .input-space i{
+        position: relative;
+        bottom: 50%;
+        left: 29rem;
+    }
+
+    .btn-space{
+        width: 32rem;
+        height: 4rem;
+    }
+
+    .headline h1{
+        font-size: 5rem;
+        position: relative;
+        top: 5rem;
+    }
+
+    .headline h1 span{
+        font-size: 7rem;
+        position: relative;
+        top:1rem;
+    }
+
+
+    .navigation {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+}
